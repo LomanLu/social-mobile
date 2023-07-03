@@ -6,6 +6,12 @@ class SearchDataRootScreen extends PureComponent {
     return ({
       bottomTabs: {
         visible: true
+      },
+      topBar: {
+        visible: false
+      },
+      bottomTab: {
+        icon: require("../../assets/tabbar/search_tab.png")
       }
     });
   }

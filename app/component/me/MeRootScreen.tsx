@@ -6,6 +6,12 @@ class MeRootScreen extends PureComponent {
     return ({
       bottomTabs: {
         visible: true
+      },
+      topBar: {
+        visible: false
+      },
+      bottomTab: {
+        icon: require("../../assets/tabbar/me_tab.png")
       }
     });
   }

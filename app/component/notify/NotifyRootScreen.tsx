@@ -6,6 +6,12 @@ class NotifyRootScreen extends PureComponent {
     return ({
       bottomTabs: {
         visible: true
+      },
+      topBar: {
+        visible: false
+      },
+      bottomTab: {
+        icon: require("../../assets/tabbar/notify_tab.png")
       }
     });
   }

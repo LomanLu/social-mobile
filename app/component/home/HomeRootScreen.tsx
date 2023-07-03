@@ -7,6 +7,12 @@ class HomeRootScreen extends PureComponent {
     return ({
       bottomTabs: {
         visible: true
+      },
+      topBar: {
+        visible: false
+      },
+      bottomTab: {
+        icon: require("../../assets/tabbar/home_tab.png")
       }
     });
   }
