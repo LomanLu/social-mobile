@@ -18,7 +18,7 @@ class NotifyRootScreen extends PureComponent {
 
   render() {
     return (
-      <SafeAreaView style={{ width: "100%", height: "100%", backgroundColor: "#FFFFFF" }}></SafeAreaView>
+      <SafeAreaView style={{ width: "100%", height: "100%", backgroundColor: "#465543" }}></SafeAreaView>
     );
   }
 }
