@@ -35,12 +35,14 @@ export const MeRootStyle = StyleSheet.create({
     marginTop: 20,
     fontWeight: 'bold',
     fontSize: 28,
+    color: '#000000'
   },
 
   nickName: {
     marginTop: 10,
     fontWeight: '500',
     fontSize: 16,
+    color: '#000000'
   },
 
   sociabilityView: {
@@ -53,11 +55,31 @@ export const MeRootStyle = StyleSheet.create({
     marginRight: 10,
   },
 
+  sociabilityPoint: {
+    flex: 0,
+    fontWeight: "bold",
+    fontSize: 18,
+    color: '#000000'
+  },
+
+  sociabilityNum: {
+    fontWeight: "bold",
+    fontSize: 16,
+    color: '#000000'
+  },
+
+  sociabilityDec: {
+    fontWeight: "bold",
+    fontSize: 16,
+    color: '#000000'
+  },
+
   followers: {
     justifyContent: 'flex-end',
   },
 
-  following: {
+  segmented: {
+    marginTop: 24
   },
 
 });
