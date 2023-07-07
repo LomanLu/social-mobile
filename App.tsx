@@ -12,12 +12,16 @@ import NotifyRootScreen from "./app/component/notify/NotifyRootScreen";
 import MeRootScreen from "./app/component/me/MeRootScreen";
 import AddRootScreen from "./app/component/add/AddRootScreen";
 import HomeRootScreen from "./app/component/home/HomeRootScreen";
+import DetailScreen from "./app/component/home/DetailScreen";
+import HomeScreen from "./app/component/home/HomeScreen";
 
 Navigation.registerComponent("AddRoot", () => AddRootScreen);
 Navigation.registerComponent("HomeRoot", () => HomeRootScreen);
 Navigation.registerComponent("MeRoot", () => MeRootScreen);
 Navigation.registerComponent("NotifyRoot", () => NotifyRootScreen);
 Navigation.registerComponent("SearchDataRoot", () => SearchDataRootScreen);
+Navigation.registerComponent("HomeScreen", () => HomeScreen);
+Navigation.registerComponent("DetailScreen", () => DetailScreen);
 
 const App = {
   root: {
@@ -28,6 +32,7 @@ const App = {
           stack: {
             children: [{
               component: {
+                id:'HomeRoot',
                 name: "HomeRoot"
               }
             }]
@@ -77,7 +82,8 @@ const App = {
 Navigation.setDefaultOptions({
   bottomTabs: {
     visible: false,
-    hideShadow: true
+    hideShadow: true,
+    titleDisplayMode:'alwaysHide'
   },
   bottomTab: {
     textColor: "#C7D6D6",
