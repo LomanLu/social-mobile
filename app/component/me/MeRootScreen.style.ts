@@ -12,3 +12,7 @@ export const MeRootStyle = StyleSheet.create({
   }
 
 });
+
+class User {
+  name: string | undefined;
+}
