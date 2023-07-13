@@ -44,6 +44,8 @@ target 'social_mobile' do
     # An absolute path to your application root.
     :app_path => "#{Pod::Config.instance.installation_root}/.."
   )
+  
+  pod 'simdjson', path: '../node_modules/@nozbe/simdjson', modular_headers: true
 
   target 'social_mobileTests' do
     inherit! :complete

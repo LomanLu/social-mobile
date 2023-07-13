@@ -14,12 +14,14 @@ import AddRootScreen from "./app/component/add/AddRootScreen";
 import HomeRootScreen from "./app/component/home/HomeRootScreen";
 import DetailScreen from "./app/component/home/DetailScreen";
 import HomeScreen from "./app/component/home/HomeScreen";
+import { Provider } from "react-redux";
+import store from "./app/util/redux/store";
 
-Navigation.registerComponent("AddRoot", () => AddRootScreen);
-Navigation.registerComponent("HomeRoot", () => HomeRootScreen);
-Navigation.registerComponent("MeRoot", () => MeRootScreen);
-Navigation.registerComponent("NotifyRoot", () => NotifyRootScreen);
-Navigation.registerComponent("SearchDataRoot", () => SearchDataRootScreen);
+Navigation.registerComponent("AddRoot", () => props => <Provider store={store()}><AddRootScreen {...props}/></Provider>, () => AddRootScreen);
+Navigation.registerComponent("HomeRoot", () => props => <Provider store={store()}><HomeRootScreen {...props}/></Provider>, () => HomeRootScreen);
+Navigation.registerComponent("MeRoot", () => props => <Provider store={store()}><MeRootScreen {...props}/></Provider>, () => MeRootScreen);
+Navigation.registerComponent("NotifyRoot", () => props => <Provider store={store()}><NotifyRootScreen {...props}/></Provider>, () => NotifyRootScreen);
+Navigation.registerComponent("SearchDataRoot", () => props => <Provider store={store()}><SearchDataRootScreen {...props}/></Provider>, () => SearchDataRootScreen);
 Navigation.registerComponent("HomeScreen", () => HomeScreen);
 Navigation.registerComponent("DetailScreen", () => DetailScreen);
 

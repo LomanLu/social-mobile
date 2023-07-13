@@ -1,8 +1,17 @@
 import React, { PureComponent } from "react";
 import { Image, StyleSheet, Text, View } from "react-native";
 import SociabilityView from "./SociabilityView";
+import { number } from "prop-types";
 
 class MeHeaderComponent extends PureComponent {
+
+  constructor(props: {} | Readonly<{}>) {
+    super(props);
+    this.state = {
+      count: 0
+    }
+  }
+
   render() {
     return (
       <View>
@@ -11,7 +20,7 @@ class MeHeaderComponent extends PureComponent {
           <Image
             source={require("../../assets/tabbar/notify_tab.png")}
             style={styles.avatar} />
-          <Text style={styles.name} numberOfLines={1}>Demo</Text>
+          <Text style={styles.name} numberOfLines={1}>{this.state.count}</Text>
           <Text style={styles.nickName} numberOfLines={1}>@o3.network</Text>
           <View style={styles.sociabilityView}>
             <SociabilityView title={"0"}
