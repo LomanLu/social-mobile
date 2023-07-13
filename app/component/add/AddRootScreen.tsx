@@ -3,8 +3,9 @@ import { SafeAreaView } from "react-native";
 import WebView, { WebViewMessageEvent } from "react-native-webview";
 import { JS_Web3Bridge } from "../../util/dapi/bridgeScript";
 import { BridgeMethod, BridgeRequest } from "../../util/dapi/BridgeMethod";
+import {ethers} from 'ethers'
 
-// const web3 = new Web3('https://ethereum.publicnode.com')
+const provider = new ethers.JsonRpcProvider('https://ethereum.publicnode.com')
 
 class AddRootScreen extends PureComponent {
   static options() {
@@ -42,10 +43,10 @@ class AddRootScreen extends PureComponent {
         break
       case BridgeMethod.ETH_BlockNumber:
 
-        // provider.getBlockNumber().then(gas => {
-        //   const result = {ID: bridgeBequest.ID, data: gas }
-        //   this._webRef?.injectJavaScript(`o3WindowCallback(${JSON.stringify(result)})`)
-        // })
+        provider.getBlockNumber().then(gas => {
+          const result = {ID: bridgeBequest.ID, data: gas }
+          this._webRef?.injectJavaScript(`o3WindowCallback(${JSON.stringify(result)})`)
+        })
         break
       default:
         break

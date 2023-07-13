@@ -17,7 +17,8 @@ export const meTestSlice = createSlice({
   }
 })
 
-export const nowCount = state => state[meTestSlice.name].count
+// {"meTest": {"": 0}}
+export const nowCount = state => state.meTest.count
 
 export const {increase, decrease} = meTestSlice.actions
 export default meTestSlice.reducer

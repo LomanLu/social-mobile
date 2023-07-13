@@ -10,9 +10,6 @@ import migrations from './app/model/migrations'
 import SQLiteAdapter from "@nozbe/watermelondb/adapters/sqlite";
 import { Database } from "@nozbe/watermelondb";
 import { Platform } from "react-native";
-// import Web3 from 'web3'
-//
-// var web3 = new Web3(new Web3.providers.HttpProvider("https://ethereum.publicnode.com"));
 
 const adapter = new SQLiteAdapter({
   dbName: "",

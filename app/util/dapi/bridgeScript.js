@@ -147,7 +147,6 @@ if (window.ethereum === undefined) {
         const promise = new Promise((resolve, reject) => {
           const callbackFn = (event) => {
             const returnData = event.detail;
-            alert(returnData.data)
             if (returnData.ID === ID) {
               if (returnData.error !== undefined && returnData.error != null) {
                 reject(returnData.error);
