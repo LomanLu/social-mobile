@@ -1,48 +1,39 @@
-import React, { PureComponent } from "react";
+import React from "react";
 import { Image, StyleSheet, Text, View } from "react-native";
 import SociabilityView from "./SociabilityView";
-import { number } from "prop-types";
 
-class MeHeaderComponent extends PureComponent {
+const MeHeaderComponent = (props: any) => {
 
-  constructor(props: {} | Readonly<{}>) {
-    super(props);
-    this.state = {
-      count: 0
-    }
-  }
+  return (
+    <View>
+      <View style={styles.topAction}></View>
+      <View style={styles.userInfo}>
+        <Image
+          source={require("../../assets/tabbar/notify_tab.png")}
+          style={styles.avatar} />
+        <Text style={styles.name} numberOfLines={1}>{props.count}</Text>
+        <Text style={styles.nickName} numberOfLines={1}>@o3.network</Text>
+        <View style={styles.sociabilityView}>
+          <SociabilityView title={"0"}
+                           description={"followers"}
+                           titleStyle={styles.sociabilityNum}
+                           descriptionStyle={styles.sociabilityDec}
+                           style={styles.followers}
+          />
 
-  render() {
-    return (
-      <View>
-        <View style={styles.topAction}></View>
-        <View style={styles.userInfo}>
-          <Image
-            source={require("../../assets/tabbar/notify_tab.png")}
-            style={styles.avatar} />
-          <Text style={styles.name} numberOfLines={1}>{this.state.count}</Text>
-          <Text style={styles.nickName} numberOfLines={1}>@o3.network</Text>
-          <View style={styles.sociabilityView}>
-            <SociabilityView title={"0"}
-                             description={"followers"}
-                             titleStyle={styles.sociabilityNum}
-                             descriptionStyle={styles.sociabilityDec}
-                             style={styles.followers}
-            />
+          <Text numberOfLines={1} style={styles.sociabilityPoint}>‧</Text>
 
-            <Text numberOfLines={1} style={styles.sociabilityPoint}>‧</Text>
-
-            <SociabilityView title={"0"}
-                             description={"following"}
-                             titleStyle={styles.sociabilityNum}
-                             descriptionStyle={styles.sociabilityDec}
-            />
-          </View>
+          <SociabilityView title={"0"}
+                           description={"following"}
+                           titleStyle={styles.sociabilityNum}
+                           descriptionStyle={styles.sociabilityDec}
+          />
         </View>
       </View>
-    );
-  }
-}
+    </View>
+  );
+
+};
 
 export const styles = StyleSheet.create({
   topAction: {
